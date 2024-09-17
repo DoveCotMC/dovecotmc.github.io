@@ -1,0 +1,12 @@
+/* 设置全屏背景图 */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/metropolis.png'); /* 图片路径 */
+    background-size: cover; /* 背景图片覆盖整个页面 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 图片不重复 */
+    height: 100vh; /* 页面高度占满视口 */
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
