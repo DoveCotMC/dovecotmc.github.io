@@ -58,37 +58,37 @@ body {
 #slide-background {
     display: flex;
     overflow: hidden;
-    flex-direction: column;
+    flex-direction: row;
     position: fixed;
     width: 100%;
     height: calc(100% - 96px);
     background-color: black;
 }
 #slide-background .banner {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
     position: relative;
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease-in-out;
     flex-shrink: 0;
 }
-#slide-background #bg-metropolis {
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center;
+#slide-background #metropolis {
     background-image: url("assets/metropolis/background.jpg");
 }
-#slide-background #bg-metropolis #slogan-base {
+#slide-background #metropolis #slogan-base {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
-#slide-background #bg-metropolis #slogan-base #slogan-container {
+#slide-background #metropolis #slogan-base #slogan-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
-#slide-background #bg-metropolis #slogan-base .slogan {
+#slide-background #metropolis #slogan-base .slogan {
     height: 6.5rem;
     font-size: 5.5rem;
     font-weight: 350;
@@ -97,17 +97,17 @@ body {
     text-align: right;
 }
 
-#slide-background #bg-metropolis #logo-base {
+#slide-background #metropolis #logo-base {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
-#slide-background #bg-metropolis #logo {
+#slide-background #metropolis #logo {
     height: 96px;
     /* right: 20rem;
     bottom: 12rem; */
 }
-#slide-background #bg-metropolis #link-text {
+#slide-background #metropolis #link-text {
     cursor: pointer;
     color: white;
     font-size: 20px;
@@ -117,12 +117,20 @@ body {
     padding-right: 30px;
 }
 
-#slide-background #bg-metropolis .spacer {
+#slide-background #metropolis .spacer {
     flex-grow: 1;
 }
-#slide-background #bg-metropolis .spacer-half {
+#slide-background #metropolis .spacer-half {
     flex-grow: 0.5;
 }
-#slide-background #bg-metropolis .spacer-double {
+#slide-background #metropolis .spacer-double {
     flex-grow: 2;
+}
+
+#slide-background #dovecot-pics {
+    background-image: url("./assets/dovecot-pics/background.jpg");
+}
+
+#slide-background #netawork {
+    background-image: url("./assets/netawork/background.jpg");
 }

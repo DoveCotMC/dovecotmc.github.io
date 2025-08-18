@@ -1,4 +1,6 @@
-const btmMcmods = document.getElementById("btn-mcmods");
+const btnMcmods = document.getElementById("btn-mcmods");
+const btnPics = document.getElementById("btn-pics");
+const btnNetawork = document.getElementById("btn-netawork");
 const slides = document.querySelectorAll('.banner');
 
 let currentIndex = 0;
@@ -19,8 +21,20 @@ function showPrev() {
     updateCarousel();
 }
 
-btmMcmods.addEventListener("mouseenter", () => {
+btnMcmods.addEventListener("mouseenter", () => {
     currentIndex = 0;
+    updateCarousel();
+    resetAutoplay();
+});
+
+btnPics.addEventListener("mouseenter", () => {
+    currentIndex = 1;
+    updateCarousel();
+    resetAutoplay();
+});
+
+btnNetawork.addEventListener("mouseenter", () => {
+    currentIndex = 2;
     updateCarousel();
     resetAutoplay();
 });
