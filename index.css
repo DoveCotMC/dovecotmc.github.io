@@ -63,10 +63,20 @@ button {
     z-index: 1;
 }
 
-#prevButton {
+/* #prevButton {
     left: 20px;
 }
 
 #nextButton {
     right: 20px;
+} */
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 32px;
+    min-height: 64px;
+    cursor: grab;
+    background-color: black;
 }
