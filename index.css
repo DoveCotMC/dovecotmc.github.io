@@ -18,7 +18,6 @@ body {
     pointer-events: none;
 }
 #header {
-    /* position: absolute; */
     width: 80%;
     height: 48px;
     display: flex;
@@ -104,8 +103,6 @@ body {
 }
 #slide-background #metropolis #logo {
     height: 96px;
-    /* right: 20rem;
-    bottom: 12rem; */
 }
 #slide-background #metropolis #link-text {
     cursor: pointer;
