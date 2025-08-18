@@ -1,82 +1,133 @@
-html, body {
+body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('assets/metropolis.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    /* margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden; */
+    background-color: #f9fafb;
+    user-select: none;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+#header-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+#header {
+    /* position: absolute; */
+    width: 80%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-bottom: 10px solid #2F98B9;
+    margin: auto auto;
+    padding: 24px 40px;
+    pointer-events: all;
+}
+#header .image {
+    cursor: pointer;
+    width: 250px;
+}
+#header .spacer {
+    flex-grow: 1;
+}
+#header .text-button {
+    cursor: pointer;
+    margin: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #5D5D5D;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-/* 外层容器，控制slider尺寸 */
-.slider-container {
+#bottom-bar {
+    position: fixed;
+    top: calc(100% - 96px);
+    width: 100%;
+    height: 96px;
+    background-color: white;
+}
+#slide-background {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 96px);
+    background-color: black;
+}
+#slide-background .banner {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden; /* 确保超出部分不可见 */
-}
-
-/* 图片滑动容器 */
-.slider {
-    display: flex;
     height: 100%;
-    width: 300%; /* 三张图片宽度之和 */
-    transition: transform 0.5s ease; /* 平滑过渡 */
+    transition: transform 0.5s ease-in-out;
+    flex-shrink: 0;
 }
-
-/* 每个背景图片的样式 */
-.slider div {
+#slide-background #bg-metropolis {
+    display: flex;
+    flex-direction: column;
     background-size: cover;
     background-position: center;
-    flex: 1; /* 每个背景图片占据100%宽度 */
-    height: 100vh;
+    background-image: url("assets/metropolis/background.jpg");
 }
-
-/* 初始化三个背景图片 */
-.slider .slide1 {
-    background-image: url('assets/1.png');
-}
-.slider .slide2 {
-    background-image: url('assets/2.png');
-}
-.slider .slide3 {
-    background-image: url('assets/3.png');
-}
-
-/* 控制左右按钮的样式 */
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 1;
-}
-
-/* #prevButton {
-    left: 20px;
-}
-
-#nextButton {
-    right: 20px;
-} */
-
-.test {
+#slide-background #bg-metropolis #slogan-base {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 32px;
-    min-height: 64px;
-    cursor: grab;
-    background-color: black;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#slide-background #bg-metropolis #slogan-base #slogan-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#slide-background #bg-metropolis #slogan-base .slogan {
+    height: 6.5rem;
+    font-size: 5.5rem;
+    font-weight: 350;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: right;
+}
+
+#slide-background #bg-metropolis #logo-base {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#slide-background #bg-metropolis #logo {
+    height: 6rem;
+    right: 20rem;
+    bottom: 12rem;
+}
+#slide-background #bg-metropolis #logo-text-base {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#slide-background #bg-metropolis #link-text {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    text-align: right;
+    padding-left: 25px;
+}
+
+#slide-background #bg-metropolis .spacer {
+    flex-grow: 1;
+}
+#slide-background #bg-metropolis .spacer-half {
+    flex-grow: 0.5;
+}
+#slide-background #bg-metropolis .spacer-double {
+    flex-grow: 2;
 }

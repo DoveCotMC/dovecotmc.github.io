@@ -1,0 +1,39 @@
+const btmMcmods = document.getElementById("btn-mcmods");
+const slides = document.querySelectorAll('.banner');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+    const offset = -currentIndex * 100; // 每页100%
+    slides.forEach(slide => {
+        slide.style.transform = `translateX(${offset}%)`;
+    });
+}
+
+function showNext() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+}
+function showPrev() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+}
+
+btmMcmods.addEventListener("mouseenter", () => {
+    currentIndex = 0;
+    updateCarousel();
+    resetAutoplay();
+});
+
+let timer = null;
+
+function startAutoplay() {
+    timer = setInterval(showNext, 10000);
+}
+
+function resetAutoplay() {
+    clearInterval(timer);
+    startAutoplay();
+}
+
+startAutoplay();
