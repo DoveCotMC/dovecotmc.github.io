@@ -75,7 +75,7 @@ body {
     flex-shrink: 0;
 }
 #slide-background #metropolis {
-    background-image: url("assets/metropolis/background.jpg");
+    background-image: url("./assets/index/metropolis/background.jpg");
 }
 #slide-background #metropolis #slogan-base {
     display: flex;
@@ -125,9 +125,9 @@ body {
 }
 
 #slide-background #dovecot-pics {
-    background-image: url("./assets/dovecot-pics/background.jpg");
+    background-image: url("./assets/index/dovecot-pics/background.jpg");
 }
 
 #slide-background #netawork {
-    background-image: url("./assets/netawork/background.jpg");
+    background-image: url("./assets/index/netawork/background.jpg");
 }
