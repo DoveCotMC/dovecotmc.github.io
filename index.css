@@ -1,5 +1,18 @@
+@font-face {
+  font-family: "GlowSansJ-Compressed-Medium";
+  src: url("./assets/GlowSansJ-Compressed-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GlowSansJ-Compressed-Light";
+  src: url("./assets/GlowSansJ-Compressed-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9fafb;
@@ -37,12 +50,12 @@ body {
 }
 #header .text-button {
     cursor: pointer;
-    margin: 14px;
+    margin: 18px;
     margin-top: 0px;
     margin-bottom: 0px;
     color: #5D5D5D;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "GlowSansJ-Compressed-Light", Arial, sans-serif;
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
@@ -105,11 +118,11 @@ body {
 #slide-background #metropolis #logo {
     height: 96px;
 }
-#slide-background #metropolis #link-text {
+#slide-background #metropolis #hyperlink {
     cursor: pointer;
     color: white;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "GlowSansJ-Compressed-Light", Helvetica, Arial, sans-serif;
     text-decoration: underline;
     text-align: right;
     padding-right: 30px;
