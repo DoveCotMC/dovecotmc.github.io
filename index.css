@@ -108,6 +108,28 @@ body {
     height: calc(100% - 96px);
     background-color: black;
 }
+#slide-background #next-button {
+    cursor: pointer;
+    position: fixed;
+    width: 3vw;
+    height: 12vh;
+    align-self: center;
+    right: 12px;
+    background-image: url("./assets/index/right.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#slide-background #previous-button {
+    cursor: pointer;
+    position: fixed;
+    width: 3vw;
+    height: 12vh;
+    align-self: center;
+    left: 12px;
+    background-image: url("./assets/index/left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 #slide-background .banner {
     display: flex;
     flex-direction: column;

@@ -57,3 +57,15 @@ btnMcmods.addEventListener("click", () => {
     console.log("114514");
     window.location.href = "./mcmods.html";
 });
+
+// Arrows
+const nextButton = document.getElementById("next-button");
+const previousButton = document.getElementById("previous-button");
+
+nextButton.addEventListener("click", () => {
+    showNext();
+});
+
+previousButton.addEventListener("click", () => {
+    showPrev();
+});
