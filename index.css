@@ -134,7 +134,7 @@ body {
 }
 #slide-background #metropolis #slogan-base .slogan {
     height: calc((8vw + 8vh) / 2);
-    font-size: calc((8vw + 8vh) / 2);
+    font-size: calc((7vw + 7vh) / 2);
     font-weight: 350;
     font-family: "GlowSansSC-Condensed-Light", Helvetica, Arial, sans-serif;
     color: white;
