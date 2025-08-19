@@ -16,6 +16,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "GlowSansSC-Condensed-Light.otf";
+  src: url("./assets/GlowSansSC-Condensed-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
     font-family: Helvetica, Arial, sans-serif;
@@ -127,10 +133,10 @@ body {
     justify-content: flex-end;
 }
 #slide-background #metropolis #slogan-base .slogan {
-    height: 6.5rem;
-    font-size: 5.5rem;
+    height: calc((8vw + 8vh) / 2);
+    font-size: calc((8vw + 8vh) / 2);
     font-weight: 350;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "GlowSansSC-Condensed-Light", Helvetica, Arial, sans-serif;
     color: white;
     text-align: right;
 }
@@ -141,12 +147,12 @@ body {
     justify-content: flex-end;
 }
 #slide-background #metropolis #logo {
-    height: 96px;
+    height: 12vh;
 }
 #slide-background #metropolis #hyperlink {
     cursor: pointer;
     color: white;
-    font-size: 20px;
+    font-size: 2vh;
     font-family: "GlowSansJ-Compressed-Light", Helvetica, Arial, sans-serif;
     text-decoration: underline;
     text-align: right;
