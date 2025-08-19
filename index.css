@@ -111,24 +111,26 @@ body {
 #slide-background #next-button {
     cursor: pointer;
     position: fixed;
-    width: 3vw;
-    height: 12vh;
+    width: calc((2vw + 3vh) / 2);
+    height: calc((6vw + 12vh) / 2);
     align-self: center;
     right: 12px;
     background-image: url("./assets/index/right.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 #slide-background #previous-button {
     cursor: pointer;
     position: fixed;
-    width: 3vw;
-    height: 12vh;
+    width: calc((2vw + 3vh) / 2);
+    height: calc((6vw + 12vh) / 2);
     align-self: center;
     left: 12px;
     background-image: url("./assets/index/left.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 #slide-background .banner {
     display: flex;
