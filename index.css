@@ -60,14 +60,14 @@ body {
 #header .spacer {
     flex-grow: 1;
 }
-#header .text-button {
+.text-button {
     cursor: pointer;
     margin: 18px;
     margin-top: 0px;
     margin-bottom: 0px;
     color: #5D5D5D;
     text-align: center;
-    font-family: "GlowSansSC-Condensed-Medium", Arial, sans-serif;
+    font-family: "GlowSansJ-Compressed-Light", Helvetica, Arial, sans-serif;
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
@@ -158,7 +158,7 @@ body {
 }
 #slide-background #metropolis #slogan-base .slogan {
     height: calc((8vw + 8vh) / 2);
-    font-size: calc((7vw + 7vh) / 2);
+    font-size: calc((6vw + 6vh) / 2);
     font-weight: 350;
     font-family: "GlowSansSC-Condensed-Light", Helvetica, Arial, sans-serif;
     color: white;
@@ -171,12 +171,12 @@ body {
     justify-content: flex-end;
 }
 #slide-background #metropolis #logo {
-    height: 12vh;
+    height: 10vh;
 }
 #slide-background #metropolis #hyperlink {
     cursor: pointer;
     color: white;
-    font-size: 2vh;
+    font-size: 2.5vh;
     font-family: "GlowSansJ-Compressed-Light", Helvetica, Arial, sans-serif;
     text-decoration: underline;
     text-align: right;
