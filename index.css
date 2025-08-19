@@ -10,6 +10,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "GlowSansSC-Condensed-Medium.otf";
+  src: url("./assets/GlowSansSC-Condensed-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
     font-family: Helvetica, Arial, sans-serif;
@@ -55,18 +61,37 @@ body {
     margin-bottom: 0px;
     color: #5D5D5D;
     text-align: center;
-    font-family: "GlowSansJ-Compressed-Light", Arial, sans-serif;
+    font-family: "GlowSansSC-Condensed-Medium", Arial, sans-serif;
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
 }
 
-#bottom-bar {
+#footer {
+    display: flex;
+    flex-direction: row;
     position: fixed;
     top: calc(100% - 96px);
     width: 100%;
     height: 96px;
     background-color: white;
+    padding: 12px 32px;
+    gap: 12px;
+}
+#footer .text {
+    display: flex;
+    flex-direction: row;
+    font-family: "GlowSansJ-Compressed-Light", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #8D8D8D;
+}
+#footer .hyperlink {
+    display: flex;
+    flex-direction: row;
+    font-family: "GlowSansJ-Compressed-Light", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #8D8D8D;
 }
 #slide-background {
     display: flex;
