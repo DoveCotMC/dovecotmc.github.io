@@ -54,7 +54,6 @@ startAutoplay();
 
 // Header buttons
 btnMcmods.addEventListener("click", () => {
-    console.log("114514");
     window.location.href = "./mcmods.html";
 });
 
