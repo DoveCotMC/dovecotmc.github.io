@@ -44,7 +44,7 @@ body {
 }
 #header {
     width: 80%;
-    height: 48px;
+    height: 40px;
     display: flex;
     align-items: center;
     background: white;
@@ -55,12 +55,12 @@ body {
 }
 #header .image {
     cursor: pointer;
-    width: 250px;
+    width: 200px;
 }
 #header .spacer {
     flex-grow: 1;
 }
-.text-button {
+#header .text-button {
     cursor: pointer;
     margin: 18px;
     margin-top: 0px;
