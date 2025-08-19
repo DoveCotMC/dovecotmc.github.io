@@ -64,8 +64,10 @@ const previousButton = document.getElementById("previous-button");
 
 nextButton.addEventListener("click", () => {
     showNext();
+    resetAutoplay();
 });
 
 previousButton.addEventListener("click", () => {
     showPrev();
+    resetAutoplay();
 });
