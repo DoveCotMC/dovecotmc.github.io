@@ -1,0 +1,20 @@
+{
+  "metropolis.page.title": "Metropolis - Dovecot 鸽舍",
+  "metropolis.hero.download": "前往Modrinth下载→",
+  "metropolis.intro.line_1": "The opening of London's steam-hauled Metropolitan Railway in 1863",
+  "metropolis.intro.line_2": "marked the beginning of rapid transit.",
+  "metropolis.features.decoration.title": "车站装饰",
+  "metropolis.features.decoration.description": "Metropolis添加了多种车站装饰，如长椅、安检机、站台门、停车标和多种建筑方块等，丰富您车站的每一处细节。",
+  "metropolis.features.fares.title": "票务系统",
+  "metropolis.features.fares.description": "Metropolis在基于MTR本身的计费系统上，重新设计了一套票务界面和IC卡系统。可交互的闸机和售票机也让您的乘车体验更加完整。",
+  "metropolis.features.fares.note": "注：Metropolis和MTR的乘车凭据无法通用",
+  "metropolis.features.tracks.title": "更多轨道",
+  "metropolis.features.tracks.description": "除了多种新方块以外，Metropolis还内置了十余种实用的轨道模型，可应对多种场景下的铺轨需求。",
+  "metropolis.features.tracks.platform": "Metropolis还添加了站台轨道模型，可以快捷地搭建出曲线站台。",
+  "metropolis.features.integration.title": "直通运行",
+  "metropolis.features.integration.name": "Metropolis",
+  "metropolis.features.integration.description": "模组正在逐步脱离对MTR的依赖，并增加对",
+  "metropolis.features.integration.nextrain": "新时速",
+  "metropolis.features.integration.ending": "的官方支持。",
+  "metropolis.download.link": "去下载Metropolis →"
+}

@@ -1,0 +1,19 @@
+{
+  "common.header.home_label": "Dovecot 首页",
+  "common.header.minecraft": "Minecraft",
+  "common.header.systems": "Systems",
+  "common.header.studio": "鴿舍製凃",
+  "common.header.about": "关于",
+  "common.header.language": "语言 / Language",
+  "common.header.simplified_chinese": "简体中文",
+  "common.header.english": "English",
+  "common.footer.greeting": "Hello from Hefei.",
+  "common.footer.bilibili": "Bilibili",
+  "common.footer.instagram": "Instagram",
+  "common.footer.mc_encyclopedia": "MC百科",
+  "common.footer.github_handle": "@DoveCotMC",
+  "common.footer.on_github": "on GitHub",
+  "common.footer.studio": "Dovecot Studio",
+  "common.footer.copyright": "© 2026 All Rights Reserved",
+  "common.meta.description": "Dovecot 鸽舍：新时速、Metropolis 与 Minecraft 铁路模组。"
+}

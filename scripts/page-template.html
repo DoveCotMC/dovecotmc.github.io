@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- Generated with node scripts/render-static.mjs; edit the template or design-data.js. -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dovecot 鸽舍：新时速、Metropolis 与 Minecraft 铁路模组。">
+    <meta name="theme-color" content="#263e54">
+    <title>__PAGE_TITLE__</title>
+    <link rel="stylesheet" href="__BASE__site.css">
+    <script defer src="__BASE__i18n.js"></script>
+    <script defer src="__BASE__local.js"></script>
+    <script>
+      if (location.protocol !== 'file:') {
+        document.addEventListener('DOMContentLoaded', () => import('__BASE__app.js'));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="scale-frame"><div id="container" data-static-path="__STATIC_PATH__" data-i18n-page="__I18N_PAGE__">__PAGE_HTML__</div></div>
+  </body>
+</html>

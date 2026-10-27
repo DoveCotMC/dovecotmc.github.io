@@ -1,0 +1,18 @@
+{
+  "nextrain.page.title": "Nextrain - Dovecot Studio",
+  "nextrain.hero.tagline": "Lighter, faster, more realistic.",
+  "nextrain.hero.guide": "Read the getting started guide →",
+  "nextrain.intro.name": "Nextrain",
+  "nextrain.intro.description": "is your next Minecraft railway mod.",
+  "nextrain.features.engine.title": "A new engine",
+  "nextrain.features.engine.description": "Nextrain makes assembling trains and laying track simpler and more convenient than existing Minecraft railway mods.",
+  "nextrain.features.controls.title": "Realistic controls",
+  "nextrain.features.controls.description": "Inspired by well-known railway simulators, Nextrain includes many moving, interactive parts for a realistic driving experience in single-player and multiplayer worlds.",
+  "nextrain.features.style.title": "An immersive style",
+  "nextrain.features.style.description": "Official Nextrain train packs use a low-poly style that preserves more controls from real trains, fits naturally into Minecraft, and uses fewer system resources.",
+  "nextrain.features.style.performance": "Frame rates stay high even when several long trains are nearby.",
+  "nextrain.features.integration.title": "Seamless integration",
+  "nextrain.features.integration.name": "Metropolis",
+  "nextrain.features.integration.description": " is gradually moving away from its MTR dependency to become a multiplatform railway decoration mod. Nextrain and Metropolis will focus on railway engines and station management respectively.",
+  "nextrain.download.link": "Try Nextrain on Modrinth →"
+}

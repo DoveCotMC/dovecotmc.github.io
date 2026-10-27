@@ -1,0 +1,20 @@
+{
+  "metropolis.page.title": "Metropolis - Dovecot Studio",
+  "metropolis.hero.download": "Download on Modrinth →",
+  "metropolis.intro.line_1": "The opening of London's steam-hauled Metropolitan Railway in 1863",
+  "metropolis.intro.line_2": "marked the beginning of rapid transit.",
+  "metropolis.features.decoration.title": "Station decoration",
+  "metropolis.features.decoration.description": "Metropolis adds benches, security scanners, platform screen doors, stopping markers, and a variety of building blocks to enrich every detail of your station.",
+  "metropolis.features.fares.title": "Fare system",
+  "metropolis.features.fares.description": "Building on MTR's fare system, Metropolis redesigns the ticket interface and IC card system. Interactive gates and ticket machines make each journey feel more complete.",
+  "metropolis.features.fares.note": "Note: Metropolis and MTR tickets are not interchangeable.",
+  "metropolis.features.tracks.title": "More tracks",
+  "metropolis.features.tracks.description": "Alongside new blocks, Metropolis includes more than ten practical track models for a range of track-building needs.",
+  "metropolis.features.tracks.platform": "Platform track models also make it easy to build curved platforms.",
+  "metropolis.features.integration.title": "Seamless integration",
+  "metropolis.features.integration.name": "Metropolis",
+  "metropolis.features.integration.description": " is gradually moving away from its MTR dependency and adding official support for ",
+  "metropolis.features.integration.nextrain": "Nextrain",
+  "metropolis.features.integration.ending": ".",
+  "metropolis.download.link": "Download Metropolis →"
+}

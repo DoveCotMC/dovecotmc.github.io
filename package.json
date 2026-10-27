@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render:static": "node scripts/render-static.mjs"
+  }
+}

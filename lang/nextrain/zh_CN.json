@@ -1,0 +1,18 @@
+{
+  "nextrain.page.title": "新时速 - Dovecot 鸽舍",
+  "nextrain.hero.tagline": "更轻，更快，更真实。",
+  "nextrain.hero.guide": "去查看食用指南→",
+  "nextrain.intro.name": "新时速",
+  "nextrain.intro.description": "是你的另一款Minecraft铁路模组。",
+  "nextrain.features.engine.title": "全新引擎",
+  "nextrain.features.engine.description": "新时速拥有比现有的Minecraft铁路模组更加简洁方便的列车编组和轨道放置。",
+  "nextrain.features.controls.title": "真实操作",
+  "nextrain.features.controls.description": "新时速以知名铁路模拟游戏为样本设计交互，包含大量可动可操作部件，无论在单人模式还是多人联机都可以体验到真实驾驶的乐趣。",
+  "nextrain.features.style.title": "沉浸画风",
+  "nextrain.features.style.description": "新时速官方车包主张low-poly的设计语言，在保留更多原车操作细节的前提下，与Minecraft世界画风无缝契合，并节省更多系统资源。",
+  "nextrain.features.style.performance": "即便在附近有多列长编组列车的情况下依然可以保持高帧率运行。",
+  "nextrain.features.integration.title": "直通运行",
+  "nextrain.features.integration.name": "Metropolis",
+  "nextrain.features.integration.description": "模组正在逐步脱离对MTR的依赖，并成为多平台的铁路装饰模组。新时速和Metropolis未来将会各自在车站管理和铁路引擎方面专注发展。",
+  "nextrain.download.link": "去Modrinth抢先体验新时速 →"
+}

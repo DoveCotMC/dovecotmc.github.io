@@ -11,3 +11,26 @@ body {
     background-size: cover;
     background-image: url("./assets/mcmods/thenextmod.jpg");
 }
+
+.language-switch {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    display: flex;
+    gap: 4px;
+    z-index: 1;
+}
+.language-switch button {
+    padding: 6px 9px;
+    border: 1px solid #aaa;
+    background: #222;
+    color: #ddd;
+    cursor: pointer;
+}
+.language-switch button[aria-pressed="true"] {
+    border-color: #fff;
+    color: #fff;
+}
+.language-switch button:focus-visible {
+    outline: 2px solid #fff;
+}

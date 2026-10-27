@@ -2,9 +2,10 @@ import { SitePage, routes } from './components.js';
 import { bindHomeCarousel } from './carousel.js';
 
 const container = document.getElementById('container');
-const normalizePath = pathname => pathname.replace(/\/+$/, '') || '/';
+const normalizePath = pathname => pathname.replace(/\/index\.html$/, '').replace(/\/+$/, '') || '/';
 let revealObserver;
 let disposeCarousel = () => {};
+document.documentElement.classList.add('js-enabled');
 
 function bindDesignMotion() {
   revealObserver?.disconnect();
@@ -37,16 +38,23 @@ export function scaleToViewport() {
   }
 }
 
-function render(pathname, { scrollToTop = true } = {}) {
-  const page = SitePage(normalizePath(pathname));
-  disposeCarousel();
-  container.innerHTML = page.html;
-  document.title = page.title;
+function activatePage(pathname, { scrollToTop = true } = {}) {
   scaleToViewport();
   if (scrollToTop) window.scrollTo(0, 0);
   bindDesignMotion();
   disposeCarousel = bindHomeCarousel(container);
   document.dispatchEvent(new CustomEvent('dovecot:pagechange', { detail: { path: normalizePath(pathname) } }));
+}
+
+function render(pathname, options) {
+  const normalizedPath = normalizePath(pathname);
+  const page = SitePage(normalizedPath);
+  disposeCarousel();
+  container.innerHTML = page.html;
+  container.dataset.staticPath = normalizedPath;
+  container.dataset.i18nPage = ({ '/': 'index', '/nextrain': 'nextrain', '/nether-portal': 'nether-portal', '/metropolis': 'metropolis' })[normalizedPath] || 'index';
+  document.title = page.title;
+  activatePage(normalizedPath, options);
 }
 
 document.addEventListener('click', event => {
@@ -67,4 +75,10 @@ window.addEventListener('resize', () => {
   resizeFrame = requestAnimationFrame(scaleToViewport);
 });
 document.fonts.ready.then(scaleToViewport);
-render(location.pathname, { scrollToTop: false });
+const initialPath = normalizePath(location.pathname);
+if (container.dataset.staticPath === initialPath ||
+    (container.dataset.staticPath === '/' && !routes.includes(initialPath))) {
+  activatePage(initialPath, { scrollToTop: false });
+} else {
+  render(initialPath, { scrollToTop: false });
+}

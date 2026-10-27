@@ -1,7 +1,8 @@
 import { design } from './design-data.js';
 
 export function SiteHeader() {
-  return design.header;
+  const switcher = '<div class="language-switch" role="group" aria-label="语言 / Language"><button type="button" data-language="zh_CN" aria-label="简体中文" aria-pressed="true">中</button><button type="button" data-language="en" aria-label="English" aria-pressed="false">EN</button></div>';
+  return design.header.replace('</div></div></nav>', `${switcher}</div></div></nav>`);
 }
 
 export function FooterContent() {

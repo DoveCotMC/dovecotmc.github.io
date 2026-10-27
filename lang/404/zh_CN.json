@@ -1,0 +1,23 @@
+{
+  "404.page.title": "Dovecot 鸽舍",
+  "404.home_page.status": "试运行中",
+  "404.home_page.headline": "Minecraft铁路，新形态",
+  "404.home_page.metropolis_label": "Metropolis Beta",
+  "404.home_page.metropolis_description": "全新升级，多端兼容的风格化车站装修模组",
+  "404.home_page.netawork_title": "在索尼变得无聊以前",
+  "404.home_page.netawork_episode": "NET@WORK ep.1",
+  "404.carousel.label": "首页精选",
+  "404.carousel.role": "轮播",
+  "404.carousel.instruction": "横向滚动切换首页精选",
+  "404.carousel.slide_role": "幻灯片",
+  "404.carousel.slide_1_name": "新时速",
+  "404.carousel.slide_1_label": "1 / 3：新时速",
+  "404.carousel.slide_2_label": "2 / 3：Metropolis",
+  "404.carousel.slide_3_label": "3 / 3：在索尼变得无聊以前",
+  "404.carousel.previous": "上一张",
+  "404.carousel.next": "下一张",
+  "404.carousel.position": "轮播位置",
+  "404.carousel.go_to_1": "切换到新时速",
+  "404.carousel.go_to_2": "切换到Metropolis",
+  "404.carousel.go_to_3": "切换到在索尼变得无聊以前"
+}

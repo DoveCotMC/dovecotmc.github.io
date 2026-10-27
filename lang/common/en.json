@@ -1,0 +1,19 @@
+{
+  "common.header.home_label": "Dovecot home",
+  "common.header.minecraft": "Minecraft",
+  "common.header.systems": "Systems",
+  "common.header.studio": "Dovecot Studio",
+  "common.header.about": "About",
+  "common.header.language": "Language / 语言",
+  "common.header.simplified_chinese": "Simplified Chinese",
+  "common.header.english": "English",
+  "common.footer.greeting": "Hello from Hefei.",
+  "common.footer.bilibili": "Bilibili",
+  "common.footer.instagram": "Instagram",
+  "common.footer.mc_encyclopedia": "MC Encyclopedia",
+  "common.footer.github_handle": "@DoveCotMC",
+  "common.footer.on_github": "on GitHub",
+  "common.footer.studio": "Dovecot Studio",
+  "common.footer.copyright": "© 2026 All Rights Reserved",
+  "common.meta.description": "Dovecot Studio: Nextrain, Metropolis, and Minecraft railway mods."
+}

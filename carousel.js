@@ -1,6 +1,7 @@
 export function bindHomeCarousel(container) {
   const carousel = container.querySelector('[data-component="home-carousel"]');
   if (!carousel) return () => {};
+  const autoplayDelay = 5000;
   const viewport = carousel.querySelector('.home-carousel__viewport');
   const slides = [...carousel.querySelectorAll('.home-carousel__slide')];
   const indicators = [...carousel.querySelectorAll('[data-carousel-index]')];
@@ -10,6 +11,7 @@ export function bindHomeCarousel(container) {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0;
   let scrollFrame;
+  let autoplayTimer;
   let drag;
   let suppressClick = false;
 
@@ -34,25 +36,45 @@ export function bindHomeCarousel(container) {
     viewport.scrollTo({ left: next * viewport.clientWidth, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
   }
 
+  function restartAutoplay() {
+    clearTimeout(autoplayTimer);
+    if (slides.length < 2 || document.hidden) return;
+    autoplayTimer = setTimeout(() => {
+      goTo(current + 1);
+      restartAutoplay();
+    }, autoplayDelay);
+  }
+
   listen(viewport, 'scroll', () => {
     cancelAnimationFrame(scrollFrame);
     scrollFrame = requestAnimationFrame(updatePosition);
   }, { passive: true });
   carousel.querySelectorAll('[data-carousel-step]').forEach(button => {
-    listen(button, 'click', () => goTo(current + Number(button.dataset.carouselStep)));
+    listen(button, 'click', () => {
+      goTo(current + Number(button.dataset.carouselStep));
+      restartAutoplay();
+    });
   });
-  indicators.forEach(button => listen(button, 'click', () => goTo(Number(button.dataset.carouselIndex))));
+  indicators.forEach(button => listen(button, 'click', () => {
+    goTo(Number(button.dataset.carouselIndex));
+    restartAutoplay();
+  }));
   listen(carousel, 'keydown', event => {
     const destination = { ArrowLeft: current - 1, ArrowRight: current + 1, Home: 0, End: slides.length - 1 }[event.key];
     if (destination === undefined || event.altKey || event.ctrlKey || event.metaKey) return;
     event.preventDefault();
     goTo(destination);
+    restartAutoplay();
   });
 
   // Trackpads and touch use native horizontal scrolling. Mouse dragging also
   // moves the same scroll container, while normal clicks retain source links.
+  listen(viewport, 'wheel', event => {
+    if (event.deltaX || event.shiftKey) restartAutoplay();
+  }, { passive: true });
   listen(viewport, 'dragstart', event => event.preventDefault());
   listen(viewport, 'pointerdown', event => {
+    restartAutoplay();
     if (event.pointerType !== 'mouse' || event.button !== 0) return;
     suppressClick = false;
     drag = { id: event.pointerId, x: event.clientX, y: event.clientY, left: viewport.scrollLeft, active: false };
@@ -80,8 +102,12 @@ export function bindHomeCarousel(container) {
     viewport.classList.remove('is-dragging');
     if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
     goTo(Math.round(viewport.scrollLeft / viewport.clientWidth));
+    restartAutoplay();
   }
-  listen(viewport, 'pointerup', finishDrag);
+  listen(viewport, 'pointerup', event => {
+    if (event.pointerType !== 'mouse') restartAutoplay();
+    finishDrag(event);
+  });
   listen(viewport, 'pointercancel', finishDrag);
   listen(viewport, 'pointerleave', event => { if (drag && !drag.active) drag = undefined; });
   listen(viewport, 'click', event => {
@@ -91,8 +117,12 @@ export function bindHomeCarousel(container) {
     event.stopPropagation();
   }, { capture: true });
 
+  listen(document, 'visibilitychange', restartAutoplay);
+  restartAutoplay();
+
   return () => {
     controller.abort();
     cancelAnimationFrame(scrollFrame);
+    clearTimeout(autoplayTimer);
   };
 }
