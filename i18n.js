@@ -16,6 +16,8 @@
     const saved = localStorage.getItem('dovecot-language');
     if (supported.has(saved)) requestedLanguage = saved;
   } catch { /* Storage may be unavailable. */ }
+  const languageInUrl = new URL(location.href).searchParams.get('lang');
+  if (supported.has(languageInUrl)) requestedLanguage = languageInUrl;
 
   function pageName() {
     return document.querySelector('[data-i18n-page]')?.dataset.i18nPage || 'index';
@@ -152,8 +154,20 @@
     const button = event.target.closest?.('[data-language]');
     if (!button || !supported.has(button.dataset.language)) return;
     requestedLanguage = button.dataset.language;
-    try { localStorage.setItem('dovecot-language', requestedLanguage); } catch { /* Optional. */ }
-    applyLanguage();
+    let saved = false;
+    try {
+      localStorage.setItem('dovecot-language', requestedLanguage);
+      saved = true;
+    } catch { /* Fall back to a URL parameter when storage is unavailable. */ }
+    const nextUrl = new URL(location.href);
+    if (nextUrl.searchParams.has('lang') || !saved) {
+      nextUrl.searchParams.set('lang', requestedLanguage);
+      if (nextUrl.href !== location.href) {
+        location.assign(nextUrl.href);
+        return;
+      }
+    }
+    location.reload();
   });
   document.addEventListener('dovecot:pagechange', () => applyLanguage());
   if (document.readyState === 'loading') {
